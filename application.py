@@ -1,9 +1,7 @@
 from flask import Flask
-application = Flask(__name__)
 
-@application.route('/')
-def hello():
-    return "Hello, World from Elastic Beanstalk!"
+app = Flask(__name__)
 
-if __name__ == "__main__":
-    application.run()
+@app.route("/")
+def home():
+    return "Hello, World!"
